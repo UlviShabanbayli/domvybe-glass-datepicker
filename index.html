@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="only dark">
+<meta name="theme-color" content="#2a1430">
+<title>Glass Date-Range Picker · DOMVYBE</title>
+<meta name="description" content="Liquid glass months over a sunset: pick a range and molten light pours between the dates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/wallpaper-1376.webp" type="image/webp" media="(min-aspect-ratio: 4/5)">
+<link rel="stylesheet" href="css/app.css">
+<script type="module" src="js/app.js"></script>
+</head>
+<body>
+<main class="stage" aria-labelledby="h1">
+  <canvas class="gl" aria-hidden="true"></canvas>
+  <h1 id="h1" class="sr">Choose your dates</h1>
+  <p id="help" class="sr">Arrow keys move by day and week, Home and End jump to the start or end of the week, Page Up and Page Down change month (with Shift, year). Press Enter or Space on the first date, then on the last date.</p>
+  <div class="panes"></div>
+  <div class="nav">
+    <button id="prev" type="button" aria-label="Previous month"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <button id="next" type="button" aria-label="Next month"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  </div>
+  <output id="value" class="sr" name="range" aria-hidden="true"></output>
+  <div class="sr" aria-live="polite" data-announce></div>
+  <small class="credit"></small>
+</main>
+<noscript><style>.stage{display:grid;place-items:center}</style><p style="color:#fff;font:16px Inter,system-ui">This date picker needs JavaScript.</p></noscript>
+</body>
+</html>
